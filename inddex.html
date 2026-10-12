@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mars Rover Simulator</title>
+    <link type="image/png" sizes="16x16" rel="icon" href="images/favicon.png">
+    <link rel="stylesheet" href="main.css">
+<link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+</head>
+<body>
+<div class= "rest" id="C1">
+    <div class="overlay">
+  
+      <div class="title"><h1>Mars Rover Simulator</h1></div>
+    <div class="row">
+      <div class="open-modal-btn-wrapper">
+        <button class="open-modal-btn"><img src="images\rovers.png.png" alt="rover"></button>
+      </div>
+    <section class="description"><p>This simulator helps model the rover you're designing in Mars conditions, accounting for gravity, friction coefficient, angle of inclination, wheel radius and more.</p></section>
+    
+    </div>
+        <div class="modal-overlay hide">
+        <div class="modal-wrapper">
+            <div class="close-btn-wrapper">
+                <button class="close-modal-btn">
+                    Close
+                </button>
+            </div>
+            <h1>Rover Details</h1>
+            <div class="modal-content">
+              <h3>Perseverance Rover</h3>
+              <h4>Body</h4>  
+              <table>
+                <tr>
+                  <th>Specs</th>
+                  <th></th>
+                </tr>
+                <tr>
+                  <td>Main job</td>
+                  <td>Carry and protect the computer, electronic, and instrument systems</td>
+                </tr>
+                 <tr>
+                  <td>Length</td>
+                  <td>3 meters</td>
+                </tr>
+                 <tr>
+                  <td>Width</td>
+                  <td>2.7 meters</td>
+                </tr>
+                <tr>
+                  <td>Height</td>
+                  <td>2.2 meters</td>
+                </tr>
+                <tr>
+                  <td>Mass</td>
+                  <td>1,025 kg</td>
+                </tr>
+
+                </table>
+
+                <h4>Wheels</h4> 
+                <table>
+                <tr>
+                  <th>Specs</th>
+                  <th></th>
+                </tr>
+                 <tr>
+                  <td>Materials</td>
+                  <td>Aluminum + cleats for traction + curved titanium spokes for support</td>
+                </tr>
+                 <tr>
+                  <td>Size</td>
+                  <td>26.25 cm radius</td>
+                </tr>
+                <tr>
+                  <td>Other</td>
+                  <td>one full turn (no slippage) drives the rover 1.65 meters</td>
+                </tr>
+                </table>
+
+                <h4>Brains</h4> 
+                <table>
+                <tr>
+                  <th>Specs</th>
+                  <th></th>
+                </tr>
+                 <tr>
+                  <td>Processor</td>
+                  <td>Radiation-hardened central processor with PowerPC 750 Architecture: a BAE RAD 750
+Operates at up to 200 megahertz speed, 10 times the speed in Mars rovers Spirit and Opportunity's computers</td>
+                </tr>
+                 <tr>
+                  <td>Memory</td>
+                  <td>2 gigabytes of flash memory</td>
+                </tr>
+                <tr>
+                  <td>“Nerves”</td>
+                  <td>Balance: Inertial Measurement Unit (IMU) provides 3-axis information on its position </td>
+                </tr>
+                <tr>
+                  <td>“health” monitering</td>
+                  <td>Computer tracks temperature and power periodically to ensure it remains at a genera equillibrium</td>
+                </tr>
+
+                </table>
+                <h4>Eyes and Ears (needed for terrain-relative navigation so the best touchdown site can be chosen)</h4>
+               <table>
+                <tr>
+                  <th>Specs</th>
+                  <th></th>
+                </tr>
+                 <tr>
+                  <td>“up look” cameras</td>
+                  <td>
+                    On backshell to film the parachute deployment and on the rover deck to look upword during skycrane maneuver and descent stage seperation
+                  </td>
+                </tr>
+                 <tr>
+                  <td>“downlook” cameras</td>
+                  <td>On the descent stage during skycrane maneuver
+Beneath the rover to look at the surface
+</td>
+                </tr>
+                <tr>
+                  <td>Other camera types</td>
+                  <td>Navcams (for navigation), CacheCams (photographs sampled materils as they are prepared for sealing and caching in sample tubes)
+</td>
+                </tr>
+                <tr>
+                  <td>Microphones</td>
+                  <td>Detects sound made after firing a laser at a rock to discover tis composition/ record landing
+</td>
+                </tr>
+
+                </table>
+
+                 <h4>Robotic Arm</h4>
+               <table>
+                <tr>
+                  <th>Specs</th>
+                  <th></th>
+                </tr>
+                 <tr>
+                  <td>Main function</td>
+                  <td>
+                   Assist in Mars surface investigation and sample collection
+                  </td>
+                </tr>
+                 <tr>
+                  <td>Length</td>
+                  <td>2.1 meters
+                  </td>
+                </tr>
+                <tr>
+                  <td>Degrees of freedom</td>
+                  <td>5: shoulder azimuth joint, shoulder elevation joint, elbow joint, wrist joint, and turret joint.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    “Hand” turret
+                  </td>
+                  <td>
+                    The turret has scientific cameras, and mineral and chemical analyzers to study and store usefl materials and calculate habitability 
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Drill bits
+                  </td>
+                  <td>
+                    A suite of interchangeable bits: coring bits, regolith bits and an abrader  
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Diameter of drilled holes
+                  </td>
+                  <td>
+                    27 millimeters 
+                  </td>
+                </tr>
+
+                </table>
+
+
+               <h4>Power Source</h4>
+               <table>
+                <tr>
+                  <th>Specs</th>
+                  <th></th>
+                </tr>
+                 <tr>
+                  <td>Location</td>
+                  <td>
+end of the rover
+                  </td>
+                </tr>
+                 <tr>
+                  <td>Size</td>
+                  <td>64 centimeters diameter x 66cm length
+                  </td>
+                </tr>
+                <tr>
+                  <td>Weight</td>
+                  <td>45 kilograms
+               </td>
+                </tr>
+                <tr>
+                  <td>
+                    Power system
+                  </td>
+                  <td>
+                    4.8 kilograms of plutonium dioxide as a heat source
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Electrical power produced
+                  </td>
+                  <td>
+110 watts at launch, declines over time
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Batteries
+                  </td>
+                  <td>
+                    Two lithium-ion rechargeable batteries 
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Reliability 
+                  </td>
+                  <td>
+                    14-year operational lifetime 
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Safety 
+                  </td>
+                  <td>
+                    The fuel inside each General Purpose Heat Source module is protected by multiple meaterials, the radioisotope fuel is manufactured in a ceramic form resistant to breakage
+
+                  </td>
+                </tr>
+
+                 <tr>
+                  <td>
+                    Other
+                  </td>
+                  <td>
+                    Communication to earth via mars orbiter via a 400 mgaherz Ultra High Frequency antnna transmitting 2MB/second. Direct communication to earth through a 0.3 m diameter X-band High-Gain Antenna which uses a 7-8 gigahertz X band, transmits 160-500 bits/sec. recieves data via a 7-8 gigahertz X-band Low-Gain Antenna with a reception rate of 10 bits/sec.
+                  </td>
+                </tr>
+
+                </table>
+
+
+
+              </div>
+        </div>
+    </div>
+
+
+    <video autoplay muted loop playsinline>
+        <source src="images\videoplayback.mp4" type="video/mp4">
+    </video>
+    <div class="video-fade"></div>
+  </div>  
+  </div>
+    
+        <div class="sd">
+<div class="timeline-wrapper">
+  <div class="timeline">
+    <div class="track1">
+      <a href="#C1">Rover Specs</a>
+      <a href="#C2">Data Input</a>
+      <a href="#C3">Formula Details</a>
+      <a href="#C4">Output</a>
+    <a href="mailto:serah.ep2012@gmail.com">contact us</a>  
+</div>
+    </div>
+</div>
+  </div>
+<div class="after">
+<section>
+    <h1 id="C2">Data input</h1>
+  <div class = "input">
+<form id="roverForm">
+
+    <div class="input">
+
+        <div class="rover-data">
+
+            <h1>Rover Data</h1>
+
+            <label for="mass">mass (kg)</label><br>
+            <input type="number" id="mass" name="mass" value="1025"><br>
+
+            <label for="radius">wheel radius (m)</label><br>
+            <input type="number" id="radius" name="wheel-radius" value="0.2625"><br><br>
+
+            <label for="torque">torque per wheel (N·m)</label><br>
+            <input type="number" id="torque" name="torque" value="6"><br><br>
+
+            <label for="wheel">number of wheels</label><br>
+            <input type="number" id="wheel" name="wheels" value="6"><br><br>
+
+            <label for="uvelocity">initial velocity (m/s)</label><br>
+            <input type="number" id="uvelocity" name="initial-velocity" value="0"><br><br>
+
+            <label for="rollingResistanceCoefficient">
+                rolling resistance coefficient
+            </label><br>
+            <input 
+                type="number" 
+                id="rollingResistanceCoefficient"
+                name="rolling-resistance"
+                value="0.02"
+                step="0.01"
+            ><br><br>
+
+        </div>
+
+
+        <div class="rover-data">
+
+            <h1>Terrain Data</h1>
+
+            <label for="friction">friction coefficient</label><br>
+            <input 
+                type="number" 
+                id="friction" 
+                name="friction" 
+                value="0.5"
+                step="0.01"
+            ><br><br>
+
+            <label for="displacement">displacement (m)</label><br>
+            <input 
+                type="number" 
+                id="displacement" 
+                name="displacement" 
+                value="10"
+            ><br><br>
+
+            <label for="angle">angle of inclination (degrees)</label><br>
+            <input 
+                type="number" 
+                id="angle" 
+                name="angle" 
+                value="0"
+            ><br><br>
+
+        </div>
+
+    </div>
+
+    <input type="submit" value="Calculate" id = "sumit">
+
+</form>
+
+</div>
+    </div>
+    <div class = "calc" id = "C3">
+      <h1> Formulas Used</h1>
+      <div class = "slider">
+        <div class = "slides">
+          <div class = "slide">
+            <h1>Angular velocity</h1>
+              <p>The rate at which the rover wheel spins around an axis
+                <br>w = s/rt<br>
+                where:
+                <br>
+                w = angular velocity (rad/s)
+                <br>
+                s = displacement (m)
+                <br>
+                r = wheel radius (m)
+                <br>
+                t = time (s)
+              </p>
+              
+          </div>
+                    <div class = "slide">
+            <h1>Propulsion force</h1>
+              <p>The force generated by a motor to move the rover forward
+                <br>F = n*T/r<br>
+                where:
+                <br>
+                F = propulsion force (N)
+                <br>
+                T = torque force per wheel (N*m)
+                <br>
+                r = wheel radius (m)
+                <br>
+                n = number of wheels
+              </p>
+              
+          </div>
+
+                    <div class = "slide">
+            <h1>maximum friction force</h1>
+              <p>The theoretical fricition force that resists the rover's motion. This creates traction
+                <br>F<sub>s,max</sub> = μ<sub>s</sub>*N<br>
+                where:
+                <br>
+                F<sub>s,max</sub> = Maximum friction force (N)
+                <br>
+                μ<sub>s</sub> = static friction coefficient
+                <br>
+                N = normal force (N)
+                <br>
+                Normal force = mass * gravity(on mars: 3.71 m/s<sup>2</sup>) * cos(angle of inclination)
+                <br>
+                If the propulsion is greater than the maximum friciton, wheels of hte rover will slip.
+                The motor is trying to push harder than the ground can transmit through static friction, so the wheel spins/slips.
+              </p>
+              
+          </div>
+<div class ="slide">
+            <h1>Resistance force</h1>
+              <p>The theoretical force resisting the rover's motion comprised of rolling resistance from the wheel's deformation and resistance from the slope.
+                <br>F<sub>resistance</sub> = F<sub>rolling</sub> + F<sub>slope</sub><br>
+                where:
+                <br>
+                F<sub>resistance</sub> = resistance force (N)
+                <br>
+                F<sub>rolling</sub> = rolling force (N) = Crr(rolling resistance coefficient) * N
+                <br>
+                F<sub>slope</sub> = slope force (N) = mass * gravity (3.71 on mars) * sin(angle of inclinatoin)                
+                <br>
+                N = normal force (N)
+                <br>
+                Normal force = mass * gravity(on mars: 3.71 m/s<sup>2</sup>) * cos(angle of inclination)
+              </p>
+              </div>
+              
+
+
+                    <div class = "slide">
+            <h1>Net force</h1>
+              <p>The theoretical total force acting on the rover
+                <br>F<sub>net</sub> = F<sub>propulsion</sub> - F<sub>resistance</sub><br>
+                where:
+                <br>
+                F<sub>net</sub> = net force (N)
+                <br>
+                F<sub>propulsion</sub> = propulsion force (N)
+                <br>
+                F<sub>resistance</sub> = resistance force (N)
+                <br>
+                If the resistance force is less than the proplusion force, the rover will move. If net force is 0, the rover won't move. if it is less than 0 it will move in the opposite of the intended direction.
+              </p>
+              
+          </div>
+
+                    <div class = "slide">
+            <h1>Work done</h1>
+              <p>The force applied to the rover over a distance
+                <br>W = F<sub>net</sub> * d<br>
+                where:
+                <br>
+                W = work done (J)
+                <br>
+                F<sub>net</sub> = net force (N)
+                <br>
+                d = distance (m), this is a scalar version of displacement
+              </p>
+              
+          </div>
+
+
+                              <div class = "slide">
+            <h1>Acceleration</h1>
+              <p>The rate of change of velocity of the rover- in this model we will take it as a contant
+                <br>a = F<sub>net</sub> / m<br>
+                where:
+                <br>
+                a = acceleration (m/s<sup>2</sup>)
+                <br>
+                F<sub>net</sub> = net force (N)
+                <br>
+                m = mass (kg)
+              </p>
+              
+          </div>
+
+
+                              <div class = "slide">
+            <h1>Time</h1>
+              <p>The time it takes to cover the displacement
+                <br>t = -u + √((u<sup>2</sup>+2as)/a)<br>
+                where:
+                <br>
+                t = time (s)
+                <br>
+                u = initial velocity (m/s)
+                <br>
+               
+                s = displacement (m)
+                <br>
+                a = acceleration (m/s<sup>2</sup>)
+              </p>
+              
+          </div>
+
+                              <div class = "slide">
+            <h1>Final velocity</h1>
+              <p>the velocity at the end of displacement after acceleration has been applied ot the initial velocity
+                <br>v = u+a*t<br>
+                where:
+                <br>
+                v = final velocity (m/s)
+                <br>
+                u = initial velocity (m/s)
+                <br>
+                a = acceleration (m/s<sup>2</sup>)
+                <br>
+                t = time (s)
+              </p>
+              
+          </div>
+          </div>
+          <nav class = "bs">
+          <button class = "prev" onclick = "prevSlide()"><</button>
+          <button class = "next" onclick = "nextSlide()">></button>
+          </nav>
+        </div>
+      </div>
+      <div class = "output" id = "C4">
+      <h1>Output<h1> 
+        <div class = "display">
+<section class="charts"><canvas id="myChart"></canvas>
+<canvas id = "myLineChart"></canvas></section>
+          <nav class = "data">
+            <section class = "output">
+            <h4 id ="finalVelocity">🛞 Final velocity: </h4>  
+            <table>
+  
+  
+  <tr>
+    <th>Category</th>
+    <th>Value</th>
+  </tr>
+
+  
+    <td>acceleration (m/s<sup>2</sup>)</td>
+    <td id = "accel"></td>
+  </tr>
+  <tr>
+    <td>time (s)</td>
+    <td id = "time"></td>
+  </tr>
+
+  <tr>
+    <td>normal force (N)</td>
+    <td id = "Normal"></td>
+  </tr>
+<tr>
+    <td>resistance (F<sub>resistance</sub>)</td>
+    <td id = "resistancee"></td>
+  </tr>
+  
+  <tr>
+  <td>maximum friction force (F<sub>s,max</sub>)</td>
+    <td id = "fmax"></td>
+  </tr>
+  <tr>
+    <td>motion</td>
+    <td id = "motion"></td>
+  </tr>
+  
+                </table>
+</section>
+
+          </nav>
+        </div> 
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0"></script>
+      <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@latest/dist/confetti.browser.min.js"></script>
+      <script src="script.js"></script>
+</body>
+</html>
+
+
